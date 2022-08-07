@@ -30,13 +30,7 @@ const oAuth2Client = new google.auth.OAuth2(
 );
 
 module.exports.getAuthURL = async () => {
-  /**
-   *
-   * Scopes array passed to the `scope` option. Any scopes passed must be enabled in the
-   * "OAuth consent screen" settings in your project on your Google Console. Also, any passed
-   *  scopes are the ones users will see when the consent screen is displayed to them.
-   *
-   */
+
   const authUrl = oAuth2Client.generateAuthUrl({
     access_type: "offline",
     scope: SCOPES,
@@ -56,21 +50,21 @@ module.exports.getAuthURL = async () => {
 
 
 //Access token
-module.exports.getAuthURL = async (event) => {
+module.exports.getAccessToken = async (event) => {
 
-  // The values used to instantiate the OAuthClient are at the top of the file
+  // The values used to instantiate OAuthClient 
   const oAuth2Client = new google.auth.OAuth2(
     client_id,
     client_secret,
     redirect_uris[0]
   );
-  // Decode authorization code extracted from the URL query
+  // Decode authorization code extracted from URL query
   const code = decodeURIComponent(`${event.pathParameters.code}`);
 
   return new Promise((resolve, reject) => {
     /**
-     *  Exchange authorization code for access token with a “callback” after the exchange,
-     *  The callback in this case is an arrow function with the results as parameters: “err” and “token.”
+     *  Exchange authorization code for access token with “callback” after exchange,
+     *  Callback here: arrow function with the results as parameters: “err” & “token”
      */
 
     oAuth2Client.getToken(code, (err, token) => {
