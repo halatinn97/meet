@@ -1,4 +1,4 @@
-const mockData = [
+let mockData = [
     {
         "kind": "calendar#events",
         "etag": "\"p3308h454qfgum0g\"",
