@@ -10,6 +10,8 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { mockData } from '../mock-data';
 import { extractLocations, getEvents } from '../api';
 
+//Unit tests
+
 describe('<App /> component', () => {
     let AppWrapper;
     beforeAll(() => {
@@ -34,6 +36,8 @@ describe('<App /> component', () => {
         expect(AppWrapper.find(Event)).toHaveLength(1);
     });
 });
+
+//Integration tests
 
 describe('<App /> integration', () => {
 
