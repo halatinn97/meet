@@ -25,7 +25,7 @@ class Event extends Component {
                     {event.start.dateTime}
                 </div>
                 <div className="group">
-                    {event.organizer}
+                    {event.organizer.email}
                 </div>
                 <div className="going">
                     {/*event.attendees[].responseStatus.accepted*/}
