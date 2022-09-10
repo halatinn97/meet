@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import moment from 'moment';
 
 
 class Event extends Component {
@@ -17,23 +17,25 @@ class Event extends Component {
     render() {
         const { event } = this.props;
         return (
-            <div className="Event">
-                <div className="name">
-                    {event.summary}
-                </div>
-                <div className="start-date-time">
-                    {event.start.dateTime}
-                </div>
-                <div className="group">
-                    {event.organizer.email}
-                </div>
-                <div className="going">
-                    {/*event.attendees[].responseStatus.accepted*/}
-                </div>
-                <button className="details"
-                    onClick={this.showDetails}>Details
+            <>
+                <div className="event">
+                    <div className="name">
+                        {event.summary}
+                    </div>
+                    <div className="start-date-time">
+                        {moment(event.start.dateTime).format('DD/MM/YYYY, hh:mm')}
+                    </div>
+                    <div className="group">
+                        {event.organizer.email}
+                    </div>
+                    <div className="going">
+                        {/*event.attendees[].responseStatus.accepted*/}
+                    </div>
+                    <button className="details"
+                        onClick={this.showDetails}>Details
                 </button>
-            </div>
+                </div>
+            </>
         );
     }
 }

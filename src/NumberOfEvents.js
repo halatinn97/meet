@@ -7,17 +7,19 @@ class NumberOfEvents extends Component {
     }
 
     handleInputChanged = (event) => {
-        const value = event.target.value;
-        if (value >= 0 && value <= 32) {
-            this.setState({ numberOfEvents: value })
+        let value = parseInt(event.target.value)
+        if (value > 0 && value <= 32) {
+            this.setState({ numberOfEvents: value });
         } else {
-            alert("Please select up to 32 events")
+            this.setState({ numberOfEvents: 32 });
         }
-    }
+        this.props.updateEvents(undefined, value);
+    };
 
     render() {
         return (
             <div className="numberOfEvents">
+                <h5>Select number of events</h5>
                 <input
                     type="text"
                     className="inputEventNumber"

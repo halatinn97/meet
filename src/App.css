@@ -1,5 +1,40 @@
 .App {
   text-align: center;
+  background-color: #71a689;
+  height: 100vh;
+  padding-top:2em;
+}
+
+.event {
+  background-color: #97bda8;
+  width: 50%;
+  display: inline-grid;
+}
+
+.CitySearch {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul.suggestions {
+  background-color: #97bda8;
+  padding: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+.numberOfEvents {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+input.inputEventNumber {
+  width: 2em;
 }
 
 .App-logo {
