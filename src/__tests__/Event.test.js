@@ -30,7 +30,7 @@ describe('<Event /> component', () => {
     });
 
     test('render details button', () => {
-        expect(EventWrapper.find('.details')).toHaveLength(1);
+        expect(EventWrapper.find('.event-details')).toHaveLength(1);
     });
 
 
@@ -39,7 +39,7 @@ describe('<Event /> component', () => {
         EventWrapper.setState({
             show: true
         });
-        EventWrapper.find('.details').simulate('click');
+        EventWrapper.find('.event-details').simulate('click');
         expect(EventWrapper.state('show')).toBe(false);
     });
 
@@ -47,10 +47,7 @@ describe('<Event /> component', () => {
         EventWrapper.setState({
             show: false
         });
-        EventWrapper.find('.details').simulate('click');
+        EventWrapper.find('.event-details').simulate('click');
         expect(EventWrapper.state('show')).toBe(true);
     });
-
-
-
 });

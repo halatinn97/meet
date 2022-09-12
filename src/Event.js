@@ -31,7 +31,7 @@ class Event extends Component {
                     <div className="going">
                         {/*event.attendees[].responseStatus.accepted*/}
                     </div>
-                    <button className="details"
+                    <button className="event-details"
                         onClick={this.showDetails}>Details
                 </button>
                 </div>
