@@ -21,25 +21,24 @@ describe('<Event /> component', () => {
         expect(EventWrapper.find('.start-date-time')).toHaveLength(1);
     });
 
+    test('render location of event', () => {
+        expect(EventWrapper.find('.location')).toHaveLength(1);
+    });
+
     test('render group of event', () => {
         expect(EventWrapper.find('.group')).toHaveLength(1);
     });
 
-    test('render amount of people participating', () => {
-        expect(EventWrapper.find('.going')).toHaveLength(1);
-    });
-
     test('render details button', () => {
-        expect(EventWrapper.find('.event-details')).toHaveLength(1);
+        expect(EventWrapper.find('.show-details-btn')).toHaveLength(1);
     });
-
 
 
     test('show details when button clicked', () => {
         EventWrapper.setState({
             show: true
         });
-        EventWrapper.find('.event-details').simulate('click');
+        EventWrapper.find('.show-details-btn').simulate('click');
         expect(EventWrapper.state('show')).toBe(false);
     });
 
@@ -47,7 +46,7 @@ describe('<Event /> component', () => {
         EventWrapper.setState({
             show: false
         });
-        EventWrapper.find('.event-details').simulate('click');
+        EventWrapper.find('.hide-details-btn').simulate('click');
         expect(EventWrapper.state('show')).toBe(true);
     });
 });

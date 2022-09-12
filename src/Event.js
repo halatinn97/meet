@@ -4,15 +4,12 @@ import moment from 'moment';
 
 class Event extends Component {
     state = {
-        show: true,
-    }
-
-    showDetails = () => {
-        this.state.show
-            ? this.setState({ show: false })
-            : this.setState({ show: true });
+        show: false,
     };
 
+    toggleDetails = () => {
+        this.setState({ show: !this.state.show });
+    };
 
     render() {
         const { event } = this.props;
@@ -24,16 +21,32 @@ class Event extends Component {
                     </div>
                     <div className="start-date-time">
                         {moment(event.start.dateTime).format('DD/MM/YYYY, hh:mm')}
+                        {event.start.timeZone}
+                    </div>
+                    <div className="location">
+                        {event.location}
                     </div>
                     <div className="group">
                         {event.organizer.email}
                     </div>
-                    <div className="going">
-                        {/*event.attendees[].responseStatus.accepted*/}
-                    </div>
-                    <button className="event-details"
-                        onClick={this.showDetails}>Details
-                </button>
+                    {this.state.show && (
+                        <>
+                            <div className="about-event">About event:</div>
+                            <a href={event.htmlLink}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="event-htmlLink">
+                                See details on Google Calendar
+                            </a>
+                            <div className="description">{event.description}</div>
+                        </>
+                    )}
+
+                    {!this.state.show ? (
+                        <button className="show-details-btn" onClick={this.toggleDetails}>Show Details</button>
+                    ) : (
+                            <button className="hide-details-btn" onClick={this.toggleDetails}>Hide Details</button>
+                        )}
                 </div>
             </>
         );
