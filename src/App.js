@@ -52,8 +52,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="appTitle">Meet</h1>
-        <h5 className="slogan"> - The app that connects you to your favorite events anywhere, anytime -</h5>
+        <div className="header">
+          <h1 className="appTitle">Meet</h1>
+          <h5 className="slogan"> - The app that connects you to your favorite events anywhere, anytime -</h5>
+        </div>
+
         <CitySearch
           locations={this.state.locations}
           updateEvents={this.updateEvents} />

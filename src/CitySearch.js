@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { InfoAlert } from './Alert';
+import Search from './img/search.png';
 
 
 class CitySearch extends Component {
@@ -18,7 +19,7 @@ class CitySearch extends Component {
         if (suggestions.length === 0) {
             this.setState({
                 query: value,
-                infoText: 'We can not find the city you are looking for. Please try another city',
+                infoText: 'We cannot find the city you are looking for. Please try another city',
             });
         } else {
             return this.setState({
@@ -41,30 +42,33 @@ class CitySearch extends Component {
 
     render() {
         return (
-            <div className="CitySearch">
-                <h5>Search events by city</h5>
-                <input
-                    type="text"
-                    className="city"
-                    placeholder="Search cities"
-                    value={this.state.query}
-                    onChange={this.handleInputChanged}
-                    onFocus={() => { this.setState({ showSuggestions: true }) }}
-                />
-                <ul className="suggestions" style={this.state.showSuggestions ? {} : { display: 'none' }}>
-                    {this.state.suggestions.map((suggestion) => (
-                        <li key={suggestion}
-                            onClick={() => this.handleItemClicked(suggestion)}
-                        >{suggestion}</li>
-                    ))}
-                    <li onClick={() => this.handleItemClicked("all")}>
-                        <b>See all cities</b>
-                    </li>
-                </ul>
+            <>
                 <div className="CitySearch">
-                    <InfoAlert text={this.state.infoText} />
+                    <div className="search-div">
+                        <img className="search-img" src={Search} alt="search-magnifier" />
+                        <input
+                            className="search-input"
+                            placeholder="Search cities"
+                            value={this.state.query}
+                            onChange={this.handleInputChanged}
+                            onFocus={() => { this.setState({ showSuggestions: true }) }}
+                        />
+                    </div>
+                    <ul className="suggestions" style={this.state.showSuggestions ? {} : { display: "none" }}>
+                        {this.state.suggestions.map((suggestion) => (
+                            <li className="single-suggestion" key={suggestion}
+                                onClick={() => this.handleItemClicked(suggestion)}
+                            >{suggestion}</li>
+                        ))}
+                        <li className="all-cities" onClick={() => this.handleItemClicked("all")}>
+                            <b>See all cities</b>
+                        </li>
+                    </ul>
+                    <div className="city-warning-div">
+                        <InfoAlert className="city-warning" text={this.state.infoText} />
+                    </div>
                 </div>
-            </div>
+            </>
         );
     }
 }
