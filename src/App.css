@@ -39,6 +39,8 @@ body {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
+  justify-content: center;
+  border-bottom: 0.1em solid;
 }
 
 input.city {
@@ -115,7 +117,6 @@ display: flex;
 .search-input {
   border: none;
   display: flex;
-  align-self: flex-end;
 }
 
 input .search-input:hover, .search-input:focus {
@@ -124,7 +125,8 @@ input .search-input:hover, .search-input:focus {
 
 
 ul.suggestions {
-  background-color:white ;
+  background-color: gainsboro ;
+  width: 100%;
   padding: 1em;
 }
 
@@ -145,7 +147,7 @@ li {
 
 .suggestions>.single-suggestion:hover, .single-suggestion:focus, 
 .suggestions> .all-cities:hover, .all-cities:focus {
-  background-color: lightgray;
+  background-color: salmon;
   cursor: pointer;
 }
 
