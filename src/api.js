@@ -2,7 +2,13 @@ import { mockData } from './mock-data';
 import axios from 'axios';
 import NProgress from 'nprogress';
 
-const checkToken = async (accessToken) => {
+export const extractLocations = (events) => {
+    let extractLocations = events.map((event) => event.location);
+    let locations = [...new Set(extractLocations)];
+    return locations;
+};
+
+export const checkToken = async (accessToken) => {
     const result = await fetch(
         `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
     )
@@ -20,6 +26,11 @@ export const getEvents = async () => {
         return mockData;
     };
 
+    if (!navigator.onLine) {
+        const data = localStorage.getItem("lastEvents");
+        NProgress.done();
+        return data ? JSON.parse(data).events : [];;
+    }
 
     const token = await getAccessToken();
 
@@ -37,11 +48,21 @@ export const getEvents = async () => {
     }
 };
 
-export const extractLocations = (events) => {
-    let extractLocations = events.map((event) => event.location);
-    let locations = [...new Set(extractLocations)];
-    return locations;
-};
+const getToken = async (code) => {
+    try {
+        const encodeCode = encodeURIComponent(code);
+
+        const response = await fetch('https://lq19kh08g7.execute-api.eu-central-1.amazonaws.com/dev/api/token' + '/' + encodeCode);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const { access_token } = await response.json();
+        access_token && localStorage.setItem("access_token", access_token);
+        return access_token;
+    } catch (error) {
+        error.json();
+    }
+}
 
 export const getAccessToken = async () => {
     const accessToken = localStorage.getItem('access_token');
@@ -76,19 +97,3 @@ const removeQuery = () => {
         window.history.pushState("", "", newurl);
     }
 };
-
-const getToken = async (code) => {
-    try {
-        const encodeCode = encodeURIComponent(code);
-
-        const response = await fetch('https://lq19kh08g7.execute-api.eu-central-1.amazonaws.com/dev/api/token' + '/' + encodeCode);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
-        }
-        const { access_token } = await response.json();
-        access_token && localStorage.setItem("access_token", access_token);
-        return access_token;
-    } catch (error) {
-        error.json();
-    }
-}
