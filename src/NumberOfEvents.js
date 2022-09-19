@@ -17,10 +17,10 @@ class NumberOfEvents extends Component {
             });
         } else {
             this.setState({
-                numberOfEvents: 32, infoText: 'Please select a number between 1-32'
+                numberOfEvents: 32,
+                infoText: 'Please select a number between 1-32'
             });
         }
-        this.props.updateEvents(undefined, value);
     };
 
     render() {

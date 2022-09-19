@@ -141,7 +141,7 @@ li {
   font-size: 14px;
 }
 
-.city-warning-div, .event-number-alert {
+.city-warning-div, .event-number-alert, .offline-warning-div {
   font-size: 0.8em;
 }
 

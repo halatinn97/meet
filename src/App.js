@@ -5,6 +5,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
+import { OfflineAlert } from './Alert';
 
 class App extends Component {
   state = {
@@ -12,6 +13,7 @@ class App extends Component {
     locations: [],
     numberOfEvents: 32,
     locationSelected: 'all',
+    offlineText: '',
   }
 
   componentDidMount() {
@@ -21,7 +23,19 @@ class App extends Component {
         this.setState({ events, locations: extractLocations(events) });
       }
     });
+
+
+    if (!navigator.onLine) {
+      this.setState({
+        offlineText: "No network connection, data may not be up to date.",
+      });
+    } else {
+      this.setState({
+        offlineText: '',
+      });
+    }
   }
+
 
   componentWillUnmount() {
     this.mounted = false;
@@ -52,6 +66,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="offline-warning-div">
+          <OfflineAlert text={this.state.offlineText} />
+        </div>
         <div className="header">
           <h1 className="appTitle">Meet</h1>
           <h5 className="slogan"> - The app that connects you to your favorite events anywhere, anytime -</h5>
