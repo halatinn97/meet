@@ -79,8 +79,8 @@ class App extends Component {
           <OfflineAlert text={this.state.offlineText} />
         </div>
         <div className="header">
-          <h1 className="appTitle">Meet</h1>
-          <h5 className="slogan"> - The app that connects you to your favorite events anywhere, anytime -</h5>
+          <h1 className="appTitle">MEET</h1>
+          <h2 className="slogan"> - The app that connects you to your favorite events anywhere, anytime -</h2>
         </div>
         <CitySearch
           locations={this.state.locations}
