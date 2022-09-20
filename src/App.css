@@ -54,7 +54,6 @@ display: flex;
 .header {
   /* background-image: url("./img/social2.png"); */
   background-color: black;
-  z-index: 10;
   background: rgba(0, 0, 0, 0.7);
 
 }

@@ -5,10 +5,10 @@ function WelcomeScreen(props) {
     return props.showWelcomeScreen ?
         (
             <div className="WelcomeScreen">
-                <h1>Welcome to the Meet app</h1>
-                <h4>
-                    Log in to see upcoming events around the world for full-stack
-                    developers
+                <h1 className="welcome-slogan">Welcome to the <span className="app-title">Meet</span> app</h1>
+                <h4 className="welcome-instruction">
+                    - Log in to see upcoming events around the world for full-stack
+                    developers -
                 </h4>
                 <div className="button_cont" align="center">
                     <div className="google-btn">
@@ -19,12 +19,12 @@ function WelcomeScreen(props) {
                         </div>
                         <button onClick={() => { props.getAccessToken() }}
                             rel="nofollow noopener"
-                            className="btn-text" >
+                            className="btn-sign-in" >
                             <b>Sign in with google</b>
                         </button>
                     </div>
                 </div>
-                <a href="https://halatinn97.github.io/meet/privacy.html" rel="nofollow noopener" >
+                <a className="privacy-policy" href="https://halatinn97.github.io/meet/privacy.html" rel="nofollow noopener" >
                     Privacy policy
                 </a>
             </div>)

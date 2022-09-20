@@ -33,8 +33,6 @@ class App extends Component {
       });
     }
 
-
-
     if (!navigator.onLine) {
       this.setState({
         offlineText: "No network connection, data may not be up to date.",
@@ -84,14 +82,11 @@ class App extends Component {
           <h1 className="appTitle">Meet</h1>
           <h5 className="slogan"> - The app that connects you to your favorite events anywhere, anytime -</h5>
         </div>
-
         <CitySearch
           locations={this.state.locations}
           updateEvents={this.updateEvents} />
-
         <EventList
           events={this.state.events} />
-
         <NumberOfEvents
           numberOfEvents={this.state.numberOfEvents}
           updateEvents={this.updateEvents} />
