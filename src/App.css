@@ -11,8 +11,9 @@
   text-align: center;
   flex-direction: column;
   min-height: 100vh;
-
 }
+
+
 
 /* html,body {
   min-height: 100%;
@@ -23,7 +24,8 @@
 
 
 body {
-  background-image: url("./img/social2.png"); 
+  background-image: url("./img/global-connections.jpg");  
+  background-color: #342c6b;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -44,7 +46,7 @@ body {
 }
 
 input.city {
- border: darksalmon 1px solid;
+ border: #34a1eb 1px solid;
 }
 /* 
 body {
@@ -55,7 +57,6 @@ display: flex;
   /* background-image: url("./img/social2.png"); */
   background-color: black;
   background: rgba(0, 0, 0, 0.7);
-
 }
 
 .appTitle, .slogan {
@@ -85,7 +86,7 @@ display: flex;
 .about-heading {
   font-weight: 700;
   margin-block: auto; 
-  text-decoration: underline 0.1em darksalmon;
+  text-decoration: underline 0.1em #34a1eb;
 }
 
 .EventList {
@@ -104,8 +105,6 @@ display: flex;
   border-bottom: 0.1em solid black;
   border-top: 0.1em solid black;
 }
-
-
 
 
 /* .search-input {
@@ -146,7 +145,7 @@ li {
 
 .suggestions>.single-suggestion:hover, .single-suggestion:focus, 
 .suggestions> .all-cities:hover, .all-cities:focus {
-  background-color: salmon;
+  background-color: #63b7c9;
   cursor: pointer;
 }
 
@@ -167,7 +166,7 @@ button {
   border-radius: 0.3em;
 }
 .show-details-btn, .hide-details-btn {
-  background-color: darksalmon;
+  background-color: #63b7c9;
   cursor: pointer;
 }
 
@@ -187,19 +186,67 @@ button {
   align-items: baseline;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  padding: 0.3;
+  padding: 2em;
 }
 .slogan {
   min-width: 0;
+  font-size: 1em;
 }
 
 input.inputEventNumber {
   width: 2em;
+  font-size: 1em;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+@media screen and (min-device-width: 1500px) and (max-device-width: 2600px) {
+   .event 
+   { 
+    line-height: 4em;
+    width: 100vh;
+    border: black 0.1em solid;
+    font-size: 1.5em;
+  }
+  .search-input {
+    width: 35em;
+    font-size: 1em;
+    height: 3em;
+  }
+
+  .suggestions {
+    font-size: 1.4em;
+  }
+  .city-warning-div {
+    font-size: 1.1em;
+  }
+
+  .header {
+    line-height: 5em;
+  }
+  .appTitle {
+    font-size: 4em;
+  }
+  .show-details-btn, .hide-details-btn {
+  width: 6em;
+  font-size: 0.8em;
+  }
+  .name {
+    font-size: 1.2em;
+  }
+  .description {
+    font-size: 1.1em;
+    line-height: 1.2em;
+  }
+  .slogan {
+    font-size: 1.5em;
+  }
+  .numberOfEvents {
+    font-size: 1.2em;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
