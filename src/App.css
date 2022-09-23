@@ -69,10 +69,12 @@ display: flex;
   /* display: flex;
   flex-direction: column; */
   line-height: 2em;
-  width: fit-content;
   border: black 0.1em solid;
   padding: 0.4em;
   border-radius: 1em;
+  width: 90%;
+  height: fit-content;
+  margin-inline: auto;
 }
 
 
