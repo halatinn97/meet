@@ -13,16 +13,6 @@
   min-height: 100vh;
 }
 
-
-
-/* html,body {
-  min-height: 100%;
-  min-width: 100%;
-  overflow: auto;
-  /* background-color: #71a689; 
-} */
-
-
 body, html {
   background-image: url("./img/global-connections.jpg");  
   background-color: #342c6b;
@@ -49,21 +39,23 @@ body, html {
 input.city {
  border: #34a1eb 1px solid;
 }
-/* 
-body {
-display: flex;
-} */
+
 
 .header {
-  /* background-image: url("./img/social2.png"); */
   background-color: black;
   background: rgba(0, 0, 0, 0.7);
+  margin-bottom: 1em;
 }
 
 .appTitle, .slogan {
   padding: 0.2em;
   color: white;
 }
+
+.appTitle {
+  text-shadow: 0.1em 0.1em 0.1em #1beeff;
+}
+
 .event {
   background-color: white;
   /* display: flex;
@@ -75,6 +67,7 @@ display: flex;
   width: 90%;
   height: fit-content;
   margin-inline: auto;
+  box-shadow: 0.3em 0.4em 0.5em #1beeff;
 }
 
 
@@ -110,13 +103,10 @@ display: flex;
   background-color: white;
   border-bottom: 0.1em solid black;
   border-top: 0.1em solid black;
+  width: 15em;
+  border-radius: 0.5em;
 }
 
-
-/* .search-input {
-  background: url(img/search.png) no-repeat scroll 0.001em;
-  padding-left:30px;
-} */
 
 .search-input {
   border: none;
@@ -153,6 +143,7 @@ li {
 .suggestions> .all-cities:hover, .all-cities:focus {
   background-color: #63b7c9;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .name {
@@ -163,7 +154,8 @@ li {
 }
 
 .description {
-  line-height: 1em;
+  line-height: 1.5em;
+  border-radius: 0.5em;
 }
 
 button {
@@ -187,13 +179,14 @@ button {
 
 .numberOfEvents {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 2em;
 }
+
 .slogan {
   min-width: 0;
   font-size: 1em;
