@@ -7,6 +7,7 @@ import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import './nprogress.css';
 import { OfflineAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
+import EventGenre from './EventGenre';
 import {
   ScatterChart,
   Scatter,
