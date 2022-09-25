@@ -22,7 +22,7 @@ const EventGenre = ({ events }) => {
     }, [events]);
 
     return (
-        <ResponsiveContainer height={400}>
+        <ResponsiveContainer height={200} padding={"15em"}>
             <PieChart width={400} height={400}>
                 <Legend verticalAlign="bottom" height={10} label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`} />
                 <Pie
