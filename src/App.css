@@ -42,7 +42,7 @@ input.city {
 
 
 .header {
-  background: gb(128,128,128, 0.7);
+  background: rgba(128,128,128, 0.7);
   margin-bottom: 1em;
 }
 
@@ -188,7 +188,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(128,128,128, 0.7);
+  background-color: rgba(128,128,128, 0.7);
   color: white;
   padding: 2em;
 }
