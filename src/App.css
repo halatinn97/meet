@@ -208,13 +208,20 @@ input.inputEventNumber {
   pointer-events: none;
 }
 
-@media only screen and (min-device-width: 320px) and  (max-device-width: 812px)  {
-  .body, html 
-  {
-  background-attachment: scroll;
-  }
+/*Iphone 11 media query*/
+@media only screen and (device-width: 414px) 
+and (device-height: 896px) 
+and (-webkit-device-pixel-ratio: 2)
+{
+  body, html
+{
+    background-image: url("./img/phone-image2.jpeg") !important; 
+    background-attachment: scroll !important; 
+    background-position: center !important;
+    background-repeat: none !important;
+    background-size: cover !important;
 }
-
+}
 
 @media screen and (min-device-width: 1500px) and (max-device-width: 2600px) {
    .event 
