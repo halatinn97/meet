@@ -101,7 +101,7 @@ class App extends Component {
         </div>
         <div className="header">
           <h1 className="appTitle">MEET</h1>
-          <h2 className="slogan"> - The app that connects you to your favorite events anywhere, anytime -</h2>
+          <h2 className="slogan"> - The app that connects you to your favorite tech events - anywhere, anytime -</h2>
         </div>
         <CitySearch
           locations={locations}
