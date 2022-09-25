@@ -21,6 +21,7 @@ class NumberOfEvents extends Component {
                 infoText: 'Please select a number between 1-32'
             });
         }
+        this.props.updateEvents(undefined, value);
     };
 
     render() {
