@@ -5,7 +5,6 @@ const EventGenre = ({ events }) => {
 
     const [data, setData] = useState([]);
     const COLORS = ['#FF5733', '#FFBD33', '#DBFF33', '#75FF33', '#33FF57'];
-
     const getData = () => {
         const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'AngularJS'];
         const data = genres.map((genre) => {
@@ -17,6 +16,7 @@ const EventGenre = ({ events }) => {
         });
         return data;
     };
+
     useEffect(() => {
         setData(() => getData());
     }, [events]);
@@ -32,9 +32,10 @@ const EventGenre = ({ events }) => {
                     outerRadius={'60%'}
                     fill="#8884d8"
                     dataKey="value"
+                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                 >
                     {data.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} name={entry.name} />
                     ))}
                 </Pie>
             </PieChart>

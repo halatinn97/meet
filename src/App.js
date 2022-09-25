@@ -35,6 +35,7 @@ class App extends Component {
     const searchParams = new URLSearchParams(window.location.search);
     const code = searchParams.get("code");
     this.setState({ showWelcomeScreen: !(code || isTokenValid) });
+    // if (true) { // Comment in to test app via Localhost without WelcomeScreen
     if ((code || isTokenValid) && this.mounted) {
       getEvents().then((events) => {
         if (this.mounted) {
@@ -103,13 +104,18 @@ class App extends Component {
           <h2 className="slogan"> - The app that connects you to your favorite events anywhere, anytime -</h2>
         </div>
         <CitySearch
-          locations={this.state.locations}
+          locations={locations}
           updateEvents={this.updateEvents} />
         <h4>Events in each city</h4>
+        <EventGenre events={events} />
         <ResponsiveContainer height={400} >
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
             <CartesianGrid />
-            <XAxis type="category" dataKey="city" name="city" />
+            <XAxis
+              type="category"
+              dataKey="city"
+              name="city"
+            />
             <YAxis
               allowDecimals={false}
               type="number"
@@ -123,7 +129,7 @@ class App extends Component {
         <EventList
           events={this.state.events} />
         <NumberOfEvents
-          numberOfEvents={this.state.numberOfEvents}
+          numberOfEvents={numberOfEvents}
           updateEvents={this.updateEvents} />
         <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
