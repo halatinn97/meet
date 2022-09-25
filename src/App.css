@@ -56,6 +56,13 @@ input.city {
   text-shadow: 0.1em 0.1em 0.1em #1beeff;
 }
 
+.chart-heading {
+  color: white;
+  align-self: center;
+  text-shadow: 0.1em 0.1em 0.1em #1beeff;
+  font-size: 1.2em;
+}
+
 .event {
   background-color: white;
   /* display: flex;

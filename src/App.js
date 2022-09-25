@@ -106,7 +106,7 @@ class App extends Component {
         <CitySearch
           locations={locations}
           updateEvents={this.updateEvents} />
-        <h4>Events in each city</h4>
+        <h4 className="chart-heading">Visualise events in each city</h4>
         <EventGenre events={events} />
         <ResponsiveContainer height={400} >
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
@@ -115,12 +115,14 @@ class App extends Component {
               type="category"
               dataKey="city"
               name="city"
+              stroke="white"
             />
             <YAxis
               allowDecimals={false}
               type="number"
               dataKey="number"
               name="number of events"
+              stroke="white"
             />
             <Tooltip cursor={{ strokeDasharray: "3 3" }} />
             <Scatter data={this.getData()} fill="#8884d8" />
