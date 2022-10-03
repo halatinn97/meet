@@ -1,47 +1,59 @@
-## meet
+## Meet
 
-Description: a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique.
-The application uses the Google Calendar API to fetch upcoming events.
+<img width="300" height="600" src="https://user-images.githubusercontent.com/76042761/193661152-dd1a4377-1436-4317-ba59-1fe48e7e3a8d.jpg">    <img width="300" height="600" src="https://user-images.githubusercontent.com/76042761/193661217-67b855b3-6ae0-4d05-adc0-7d214e6bba0e.jpg">  <img width="300"  width="300" height="600" src="https://user-images.githubusercontent.com/76042761/193662881-513b0355-a12f-49db-b225-fc20672c7076.jpg">
 
-## Key features:
+### Description: 
 
-#### Feature 1: Filter events by city
-Scenario 1: When user hasn’t searched for a city, show upcoming events from all cities.
-Scenario 2: User should see a list of suggestions when they search for a city.
-Scenario 3: User can select a city from the suggested list.
+A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming tech events from around the world.
 
-As a user
-I should be able to "filter events by city"
-So that I can see the list of events that take place in that city
+### Key features:
 
-#### Feature 2: Show/hide event details
-Scenario 1: An event element is collapsed by default.
-Scenario 2: User can expand an event to see its details.
-Scenario 3: User can collapse an event to hide its details.
+- Filter events by city
+- Authenticate users safely via Google 
+- Show/hide event details
+- Add events to Google Calendar
+- Specify number of events
+- Use the app when offline
+- Data visualisation
 
-As a user 
-I should be able to “shows/hide event’s details”
-So that I can find out more information about the event or hide event information if not needed
+### Technologies & frameworks used:
 
-#### Feature 3: Specify number of events
-Scenario 1: When user hasn’t specified a number, 32 is the default number.
-Scenario 2: User can change the number of events they want to see.
+- React
+- GoogleAPI
+- React testing library
+- Jest
+- Cucumber 
+- Atatus
+- Recharts
 
-As a user 
-I should be able to “specify number of events”
-So that I can control the amount of events shown to my current needs and keep a clear overview
+### Dependencies:
 
-#### Feature 4: Use the app when offline
-Scenario 1: Show cached data when there’s no internet connection.
-Scenario 2: Show error when user changes the settings (city, time range).
-
-As a user
-I should be able to “use the app when offline”
-So that I can still make use of the app when I do not have an internet connection
-
-### Feature 5: Data visualisation
-Scenario 1: Show a chart with the number of upcoming events in each city.
-
-As a user 
-I should be able to “visualise data”
-So that I can have a visual overview of upcoming events in different cities
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "atatus-spa": "^4.5.0",
+    "axios": "^0.27.2",
+    "fsevents": "^2.3.2",
+    "nprogress": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-moment": "^1.1.2",
+    "react-scripts": "^5.0.1",
+    "recharts": "^2.1.14",
+    "web-vitals": "^2.1.4",
+    "workbox-background-sync": "^6.5.4",
+    "workbox-broadcast-update": "^6.5.4",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-core": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-google-analytics": "^6.5.4",
+    "workbox-navigation-preload": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-range-requests": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4",
+    "workbox-streams": "^6.5.4"
+  
+  ### How to run the project:
+  
+  Find the deployed Github page via: https://halatinn97.github.io/meet/ - accessible via all devices.
