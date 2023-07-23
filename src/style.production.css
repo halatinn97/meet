@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -74,6 +81,7 @@ input.city {
 
 .appTitle {
   height: 15em;
+  width: 20em;
 }
 
 h4.chart-heading {
@@ -94,14 +102,21 @@ h4.chart-heading {
   padding: 1.5rem;
   border-radius: 1em;
   width: 90%;
+  min-height: 18em;
+
   height: -webkit-fit-content;
+
   height: -moz-fit-content;
+
   height: fit-content;
   margin-inline: auto;
   -webkit-box-shadow: 0.3em 0.4em 0.5em #1beeff;
   box-shadow: 0.3em 0.4em 0.5em #1beeff;
 }
 
+.calendar {
+  background-color: lightblue;
+}
 
 .location,
 .calendar,
@@ -116,12 +131,10 @@ h4.chart-heading {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  font-size: 1.5em;
+
 }
 
-div.start-date-time,
-div.location {
-  font-size: 1.3em;
-}
 
 .location-img,
 .google-calendar-link,
@@ -135,6 +148,7 @@ div.location {
   margin-block: auto;
   -webkit-text-decoration: underline 0.1em #34a1eb;
   text-decoration: underline 0.1em #34a1eb;
+  font-size: 1.4em;
 }
 
 .EventList {
@@ -234,6 +248,8 @@ li {
 .description {
   line-height: 1.5em;
   border-radius: 0.5em;
+  font-size: 1.4em;
+
 }
 
 button {

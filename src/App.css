@@ -59,6 +59,7 @@ input.city {
 
 .appTitle {
   height: 15em;
+  width: 20em;
 }
 
 h4.chart-heading {
@@ -77,11 +78,16 @@ h4.chart-heading {
   padding: 1.5rem;
   border-radius: 1em;
   width: 90%;
+  min-height: 18em;
+
   height: fit-content;
   margin-inline: auto;
   box-shadow: 0.3em 0.4em 0.5em #1beeff;
 }
 
+.calendar {
+  background-color: lightblue;
+}
 
 .location,
 .calendar,
@@ -89,12 +95,10 @@ h4.chart-heading {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
+  font-size: 1.5em;
+
 }
 
-div.start-date-time,
-div.location {
-  font-size: 1.3em;
-}
 
 .location-img,
 .google-calendar-link,
@@ -107,6 +111,7 @@ div.location {
   font-weight: 700;
   margin-block: auto;
   text-decoration: underline 0.1em #34a1eb;
+  font-size: 1.4em;
 }
 
 .EventList {
@@ -189,6 +194,8 @@ li {
 .description {
   line-height: 1.5em;
   border-radius: 0.5em;
+  font-size: 1.4em;
+
 }
 
 button {
