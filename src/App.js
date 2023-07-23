@@ -100,7 +100,7 @@ class App extends Component {
           <OfflineAlert text={this.state.offlineText} />
         </div>
         <div className="header">
-          <h1 className="appTitle">MEET</h1>
+          <img src="img/title.png" className="appTitle" alt="App title: The Event"></img>
           <h2 className="slogan"> - The app that connects you to your favorite tech events - anywhere, anytime -</h2>
         </div>
         <CitySearch
