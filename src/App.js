@@ -8,7 +8,7 @@ import './nprogress.css';
 import { OfflineAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
 import EventGenre from './EventGenre';
-import Title from './img/tite.png'
+import Title from './img/title.png';
 
 import {
   ScatterChart,
