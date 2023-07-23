@@ -1,11 +1,11 @@
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
   padding: 0;
 }
 
 .App {
   text-align: center;
-  padding-top:2em;
+  padding-top: 2em;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -13,8 +13,9 @@
   min-height: 100vh;
 }
 
-body, html {
-  background-image: url("./img/global-connections.jpg");  
+body,
+html {
+  background-image: url("./img/global-connections.jpg");
   background-color: #342c6b;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,16 +38,16 @@ body, html {
 }
 
 input.city {
- border: #34a1eb 1px solid;
+  border: #34a1eb 1px solid;
 }
 
 
 .header {
-  background: rgba(128,128,128, 0.7);
   margin-bottom: 1em;
 }
 
-.appTitle, .slogan {
+.appTitle,
+.slogan {
   padding: 0.2em;
   color: white;
 }
@@ -77,29 +78,35 @@ h4.chart-heading {
 }
 
 
-.location, .calendar, .start-date-time {
+.location,
+.calendar,
+.start-date-time {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
 }
-.location-img, .google-calendar-link, .time-img {
+
+.location-img,
+.google-calendar-link,
+.time-img {
   height: 2em;
   width: 2em;
 }
 
 .about-heading {
   font-weight: 700;
-  margin-block: auto; 
+  margin-block: auto;
   text-decoration: underline 0.1em #34a1eb;
 }
 
 .EventList {
   display: grid;
-  grid-template-columns: auto;
-  grid-row-gap: 10px; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-row-gap: 10px;
   grid-column-gap: 10px;
-  gap: 1em;
+  gap: 2em;
 }
+
 .CitySearch {
   display: flex;
   justify-content: center;
@@ -119,13 +126,14 @@ h4.chart-heading {
   display: flex;
 }
 
-input .search-input:hover, .search-input:focus {
+input .search-input:hover,
+.search-input:focus {
   outline-width: 0;
 }
 
 
 ul.suggestions {
-  background-color: gainsboro ;
+  background-color: gainsboro;
   width: 100%;
   padding: 1em;
 }
@@ -141,12 +149,16 @@ li {
   font-size: 14px;
 }
 
-.city-warning-div, .event-number-alert, .offline-warning-div {
+.city-warning-div,
+.event-number-alert,
+.offline-warning-div {
   font-size: 0.8em;
 }
 
-.suggestions>.single-suggestion:hover, .single-suggestion:focus, 
-.suggestions> .all-cities:hover, .all-cities:focus {
+.suggestions>.single-suggestion:hover,
+.single-suggestion:focus,
+.suggestions>.all-cities:hover,
+.all-cities:focus {
   background-color: #63b7c9;
   cursor: pointer;
   font-weight: bold;
@@ -157,6 +169,9 @@ li {
   background-color: lightgray;
   display: flex;
   justify-content: space-between;
+  min-height: 5rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
 }
 
 .description {
@@ -169,26 +184,28 @@ button {
   border: 0.1em solid black;
   border-radius: 0.3em;
 }
-.show-details-btn, .hide-details-btn {
+
+.show-details-btn,
+.hide-details-btn {
   background-color: #63b7c9;
   cursor: pointer;
 }
 
-.show-details-btn:hover, .hide-details-btn:hover
-.show-details-btn:focus, .hide-details-btn:focus 
- {
+.show-details-btn:hover,
+.hide-details-btn:hover .show-details-btn:focus,
+.hide-details-btn:focus {
   transition-duration: 0.8s;
   transition-property: background-color, transform;
   filter: brightness(120%);
   outline-style: none;
- }
+}
 
 .numberOfEvents {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(128,128,128, 0.7);
+  background-color: rgba(128, 128, 128, 0.7);
   color: white;
   padding: 2em;
 }
@@ -209,28 +226,119 @@ input.inputEventNumber {
 }
 
 /*Iphone 11 media query*/
-@media only screen and (device-width: 414px) 
-and (device-height: 896px) 
-and (-webkit-device-pixel-ratio: 2)
-{
-  body, html
-{
-    background-image: url("./img/phone-image2.jpeg") !important; 
-    background-attachment: scroll !important; 
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+
+  body,
+  html {
+    background-image: url("./img/phone-image2.jpeg") !important;
+    background-attachment: scroll !important;
     background-position: center !important;
     background-repeat: none !important;
     background-size: cover !important;
-}
+  }
 }
 
+@media screen and (min-width: 1440px) and (max-width: 1440px) and (min-height: 821px) and (max-height: 821px) {
+  .event {
+    min-height: 12em;
+  }
+
+  .show-details-btn,
+  .hide-details-btn {
+    height: 3em;
+  }
+
+  .name {
+    min-height: 3rem;
+  }
+
+}
+
+/* For screens with the dimension 1024 x 821 */
+@media screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 821px) and (max-height: 821px) {
+  .event {
+    min-height: 10em;
+    width: 20em;
+    height: fit-content;
+  }
+
+  .show-details-btn,
+  .hide-details-btn {
+    height: 45px;
+  }
+
+  .name {
+    min-height: 3rem;
+  }
+}
+
+/* For screens with the dimension 768 x 821 */
+@media screen and (min-width: 768px) and (max-width: 768px) and (min-height: 821px) and (max-height: 821px) {
+  .event {
+    min-height: 10em;
+    width: 20em;
+    height: fit-content;
+  }
+
+  .show-details-btn,
+  .hide-details-btn {
+    height: 45px;
+  }
+
+  .name {
+    min-height: 3rem;
+  }
+}
+
+/* For screens with the dimension 425 x 821 */
+@media screen and (min-width: 425px) and (max-width: 425px) and (min-height: 821px) and (max-height: 821px) {
+  .event {
+    min-height: 10em;
+    width: 20em;
+    height: fit-content;
+  }
+
+  .show-details-btn,
+  .hide-details-btn {
+    height: 45px;
+  }
+
+  .name {
+    min-height: 3rem;
+  }
+}
+
+/* For screens with the dimension 375 x 821 */
+@media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 821px) and (max-height: 821px) {
+  .event {
+    min-height: 10em;
+    width: 20em;
+    height: fit-content;
+  }
+
+  .show-details-btn,
+  .hide-details-btn {
+    height: 45px;
+  }
+
+  .name {
+    min-height: 3rem;
+  }
+}
+
+
+
+
+
 @media screen and (min-device-width: 1500px) and (max-device-width: 2600px) {
-   .event 
-   { 
-    line-height: 4em;
+  .event {
     width: 100vh;
     border: black 0.1em solid;
-    font-size: 1.5em;
+    font-size: 1.2rem;
+    height: fit-content;
+    min-height: 17em;
   }
+
   .search-input {
     width: 35em;
     font-size: 1em;
@@ -240,6 +348,7 @@ and (-webkit-device-pixel-ratio: 2)
   .suggestions {
     font-size: 1.4em;
   }
+
   .city-warning-div {
     font-size: 1.1em;
   }
@@ -247,23 +356,26 @@ and (-webkit-device-pixel-ratio: 2)
   .header {
     line-height: 5em;
   }
+
   .appTitle {
     font-size: 4em;
   }
-  .show-details-btn, .hide-details-btn {
-  width: 6em;
-  font-size: 0.8em;
+
+  .show-details-btn,
+  .hide-details-btn {
+    width: 6em;
+    font-size: 0.8em;
   }
-  .name {
-    font-size: 1.2em;
-  }
+
   .description {
     font-size: 1.1em;
     line-height: 1.2em;
   }
+
   .slogan {
     font-size: 1.5em;
   }
+
   .numberOfEvents {
     font-size: 1.2em;
   }
@@ -294,6 +406,7 @@ and (-webkit-device-pixel-ratio: 2)
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
