@@ -8,6 +8,8 @@ import './nprogress.css';
 import { OfflineAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
 import EventGenre from './EventGenre';
+import Title from './img/tite.png'
+
 import {
   ScatterChart,
   Scatter,
@@ -100,7 +102,7 @@ class App extends Component {
           <OfflineAlert text={this.state.offlineText} />
         </div>
         <div className="header">
-          <img src="img/title.png" className="appTitle" alt="App title: The Event"></img>
+          <img src={Title} className="appTitle" alt="App title: The Event"></img>
           <h2 className="slogan"> - The app that connects you to your favorite tech events - anywhere, anytime -</h2>
         </div>
         <CitySearch
