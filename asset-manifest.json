@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/meet/static/css/main.e5808a0e.css",
-    "main.js": "/meet/static/js/main.49758314.js",
+    "main.css": "/meet/static/css/main.26c3a5d9.css",
+    "main.js": "/meet/static/js/main.b89106de.js",
     "static/js/787.4b564826.chunk.js": "/meet/static/js/787.4b564826.chunk.js",
     "static/media/global-connections.jpg": "/meet/static/media/global-connections.04566138e754917907fb.jpg",
+    "static/media/title.png": "/meet/static/media/title.fe80d4bd84df207035ac.png",
     "service-worker.js": "/meet/service-worker.js",
     "static/media/phone-image2.jpeg": "/meet/static/media/phone-image2.0eb5dc12088668cd857b.jpeg",
     "static/media/location.png": "/meet/static/media/location.add3f98bb714685fed5d.png",
@@ -11,12 +12,12 @@
     "static/media/google-calendar.png": "/meet/static/media/google-calendar.193533ac63c612adfe51.png",
     "static/media/search.png": "/meet/static/media/search.c23047bb52437be462fa.png",
     "index.html": "/meet/index.html",
-    "main.e5808a0e.css.map": "/meet/static/css/main.e5808a0e.css.map",
-    "main.49758314.js.map": "/meet/static/js/main.49758314.js.map",
+    "main.26c3a5d9.css.map": "/meet/static/css/main.26c3a5d9.css.map",
+    "main.b89106de.js.map": "/meet/static/js/main.b89106de.js.map",
     "787.4b564826.chunk.js.map": "/meet/static/js/787.4b564826.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5808a0e.css",
-    "static/js/main.49758314.js"
+    "static/css/main.26c3a5d9.css",
+    "static/js/main.b89106de.js"
   ]
 }
